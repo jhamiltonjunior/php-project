@@ -9,7 +9,7 @@ class Title {
 
   public static function create (string $title): Title {
     $title = trim($title);
-    $title = str_replace('  ', ' ', $title);
+    $title = preg_replace('/( )+/', ' ', $title);
 
     if (!Title::validate($title)) {
     }
@@ -34,6 +34,7 @@ class Title {
   }
 }
 
-$title = Title::create('Titulo da minha tarefa!');
+$title = Title::create('Titulo da     minha   tarefa!');
 
-echo $title;
+print_r($title);
+print_r($title->getValue());
