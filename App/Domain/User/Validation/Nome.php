@@ -1,11 +1,11 @@
 <?php
 
-namespace Validator;
+namespace App\Domain\User\Validation;
 
 class Name {
   private string $name;
 
-  private function __construct(string $name) {
+  public function __construct(string $name) {
     $this->name = $name;
   }
 
@@ -35,8 +35,3 @@ class Name {
     return true;
   }
 }
-
-$name = Name::create('Titulo da     minha   tarefa!');
-
-print_r($name);
-print_r($name->getValue());
