@@ -13,7 +13,6 @@ class NameTest extends TestCase {
 
     echo $nome->getValue();
 
-
     $this->assertTrue(true);
   }
 }
