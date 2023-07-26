@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Domain\User\Validation;
+namespace Domain\User\Validation;
+
+use Domain\User\Error\NameError;
 
 class Name {
   private string $name;
@@ -9,11 +11,12 @@ class Name {
     $this->name = $name;
   }
 
-  public static function create (string $name): Name {
+  public static function create(string $name): NameError|Name {
     $name = trim($name);
     $name = preg_replace('/( )+/', ' ', $name);
 
     if (!Name::validate($name)) {
+      return new NameError($name);
     }
 
     return new Name($name);
@@ -31,7 +34,7 @@ class Name {
     ) {
       return false;
     }
-    
+
     return true;
   }
 }

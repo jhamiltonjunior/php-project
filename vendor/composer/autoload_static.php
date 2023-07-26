@@ -34,7 +34,6 @@ class ComposerStaticInit9a893e62630fc620ca0b61756f02f128
     );
 
     public static $classMap = array (
-        'App\\Domain\\User\\Validation\\Name' => __DIR__ . '/../..' . '/App/Domain/User/Validation/Nome.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
         'DeepCopy\\Exception\\CloneException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
@@ -61,6 +60,8 @@ class ComposerStaticInit9a893e62630fc620ca0b61756f02f128
         'DeepCopy\\TypeFilter\\Spl\\SplDoublyLinkedListFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/Spl/SplDoublyLinkedListFilter.php',
         'DeepCopy\\TypeFilter\\TypeFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/TypeFilter.php',
         'DeepCopy\\TypeMatcher\\TypeMatcher' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeMatcher/TypeMatcher.php',
+        'Domain\\User\\Error\\NameError' => __DIR__ . '/../..' . '/src/Domain/User/Error/NameError.php',
+        'Domain\\User\\Validation\\Name' => __DIR__ . '/../..' . '/src/Domain/User/Validation/Nome.php',
         'PHPUnit\\Event\\Application\\Finished' => __DIR__ . '/..' . '/phpunit/phpunit/src/Event/Events/Application/Finished.php',
         'PHPUnit\\Event\\Application\\FinishedSubscriber' => __DIR__ . '/..' . '/phpunit/phpunit/src/Event/Events/Application/FinishedSubscriber.php',
         'PHPUnit\\Event\\Application\\Started' => __DIR__ . '/..' . '/phpunit/phpunit/src/Event/Events/Application/Started.php',
@@ -969,6 +970,9 @@ class ComposerStaticInit9a893e62630fc620ca0b61756f02f128
         'PharIo\\Version\\VersionConstraintParser' => __DIR__ . '/..' . '/phar-io/version/src/VersionConstraintParser.php',
         'PharIo\\Version\\VersionConstraintValue' => __DIR__ . '/..' . '/phar-io/version/src/VersionConstraintValue.php',
         'PharIo\\Version\\VersionNumber' => __DIR__ . '/..' . '/phar-io/version/src/VersionNumber.php',
+        'PhpFp\\Either\\Constructor\\Left' => __DIR__ . '/../..' . '/src/shared/Constructor/Left.php',
+        'PhpFp\\Either\\Constructor\\Right' => __DIR__ . '/../..' . '/src/shared/Constructor/Right.php',
+        'PhpFp\\Either\\Either' => __DIR__ . '/../..' . '/src/shared/Either.php',
         'PhpParser\\Builder' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder.php',
         'PhpParser\\BuilderFactory' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/BuilderFactory.php',
         'PhpParser\\BuilderHelpers' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/BuilderHelpers.php',

@@ -1,3 +1,5 @@
+src/shared
+
 # Apache Ant
 /.ant_targets
 
