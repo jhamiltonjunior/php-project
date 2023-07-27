@@ -1,4 +1,5 @@
-src/shared
+src/shared/Constructor
+src/shared/Either.php
 
 # Apache Ant
 /.ant_targets
