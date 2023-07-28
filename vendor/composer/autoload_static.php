@@ -60,7 +60,9 @@ class ComposerStaticInit9a893e62630fc620ca0b61756f02f128
         'DeepCopy\\TypeFilter\\Spl\\SplDoublyLinkedListFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/Spl/SplDoublyLinkedListFilter.php',
         'DeepCopy\\TypeFilter\\TypeFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/TypeFilter.php',
         'DeepCopy\\TypeMatcher\\TypeMatcher' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeMatcher/TypeMatcher.php',
+        'Domain\\User\\Error\\EmailError' => __DIR__ . '/../..' . '/src/Domain/User/Error/EmailError.php',
         'Domain\\User\\Error\\NameError' => __DIR__ . '/../..' . '/src/Domain/User/Error/NameError.php',
+        'Domain\\User\\Validation\\Email' => __DIR__ . '/../..' . '/src/Domain/User/Validation/Email.php',
         'Domain\\User\\Validation\\Name' => __DIR__ . '/../..' . '/src/Domain/User/Validation/Nome.php',
         'PHPUnit\\Event\\Application\\Finished' => __DIR__ . '/..' . '/phpunit/phpunit/src/Event/Events/Application/Finished.php',
         'PHPUnit\\Event\\Application\\FinishedSubscriber' => __DIR__ . '/..' . '/phpunit/phpunit/src/Event/Events/Application/FinishedSubscriber.php',
@@ -1433,6 +1435,7 @@ class ComposerStaticInit9a893e62630fc620ca0b61756f02f128
         'TheSeer\\Tokenizer\\TokenCollectionException' => __DIR__ . '/..' . '/theseer/tokenizer/src/TokenCollectionException.php',
         'TheSeer\\Tokenizer\\Tokenizer' => __DIR__ . '/..' . '/theseer/tokenizer/src/Tokenizer.php',
         'TheSeer\\Tokenizer\\XMLSerializer' => __DIR__ . '/..' . '/theseer/tokenizer/src/XMLSerializer.php',
+        'shared\\IsValidEmail' => __DIR__ . '/../..' . '/src/shared/IsValidEmail.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

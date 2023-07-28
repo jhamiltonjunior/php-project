@@ -3,7 +3,8 @@
 namespace Domain\User\Validation;
 
 use Domain\User\Error\EmailError;
-use shared\is_valid_email_address;
+
+use shared\IsValidEmail;
 
 class Email {
   private $email;
@@ -28,17 +29,18 @@ class Email {
   }
 
   private static function validate(string $email): bool {
-    $tester = "/^[-!#$%&'*+/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/";
-
+    // this is if is redundant
     if (
       !$email ||
-      $email > 10 ||
-      $email < 256
+      strlen($email) < 5 || 
+      strlen($email) > 254
     ) {
       return false;
     }
 
-    if (!is_valid_email_address($email)) {
+    $isValidEmail = new IsValidEmail($email);
+
+    if (!$isValidEmail->getValue()) {
       return false;
     }
 

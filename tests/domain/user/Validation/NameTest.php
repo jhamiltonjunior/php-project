@@ -1,6 +1,5 @@
 <?php declare(strict_types=1);
 
-use App\Domain\User\Validation;
 use PHPUnit\Framework\TestCase;
 
 use \Domain\User\Validation\Name;
@@ -12,8 +11,6 @@ class NameTest extends TestCase {
     // Menos de 10 caracteres
     $nome = Name::create('Nome');
 
-
-    // $this->assertTrue(true);
     $this->assertEquals($nome->getValue(), 'This name Nome is invalid');
   }
 
