@@ -20,7 +20,7 @@ class NameTest extends TestCase {
     $manyCharacters = '';
 
     for ($i; $i < 257; $i++) {
-      $manyCharacters = 'a';
+      $manyCharacters .= 'a';
     }
     
     $name = Name::create($manyCharacters);
