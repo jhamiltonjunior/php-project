@@ -63,6 +63,7 @@ class ComposerStaticInit9a893e62630fc620ca0b61756f02f128
         'Domain\\User\\Error\\EmailError' => __DIR__ . '/../..' . '/src/Domain/User/Error/EmailError.php',
         'Domain\\User\\Error\\NameError' => __DIR__ . '/../..' . '/src/Domain/User/Error/NameError.php',
         'Domain\\User\\Error\\PasswordError' => __DIR__ . '/../..' . '/src/Domain/User/Error/PassowordError.php',
+        'Domain\\User\\User' => __DIR__ . '/../..' . '/src/Domain/User/User.php',
         'Domain\\User\\Validation\\Email' => __DIR__ . '/../..' . '/src/Domain/User/Validation/Email.php',
         'Domain\\User\\Validation\\Name' => __DIR__ . '/../..' . '/src/Domain/User/Validation/Nome.php',
         'Domain\\User\\Validation\\Password' => __DIR__ . '/../..' . '/src/Domain/User/Validation/Password.php',

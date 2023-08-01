@@ -29,7 +29,7 @@ class Name {
   private static function validate(string $name): bool {
     if (
       !$name ||
-      strlen($name) < 10 ||
+      strlen($name) < 7 ||
       strlen($name) > 255
     ) {
       return false;

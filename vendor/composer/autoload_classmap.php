@@ -35,6 +35,7 @@ return array(
     'Domain\\User\\Error\\EmailError' => $baseDir . '/src/Domain/User/Error/EmailError.php',
     'Domain\\User\\Error\\NameError' => $baseDir . '/src/Domain/User/Error/NameError.php',
     'Domain\\User\\Error\\PasswordError' => $baseDir . '/src/Domain/User/Error/PassowordError.php',
+    'Domain\\User\\User' => $baseDir . '/src/Domain/User/User.php',
     'Domain\\User\\Validation\\Email' => $baseDir . '/src/Domain/User/Validation/Email.php',
     'Domain\\User\\Validation\\Name' => $baseDir . '/src/Domain/User/Validation/Nome.php',
     'Domain\\User\\Validation\\Password' => $baseDir . '/src/Domain/User/Validation/Password.php',
