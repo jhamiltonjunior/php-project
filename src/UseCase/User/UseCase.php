@@ -16,13 +16,8 @@ use UseCase\User\Interface\IUseCase;
 
 use UseCase\Repository\UserRepository;
 
-
-const arr = [
-  'name' => 0
-];
-
 class UseCase implements IUseCase {
-  private ?UserRepository $userRepository;
+  private UserRepository $userRepository;
 
   private NameError $nameError;
   private EmailError $emailError;
@@ -43,19 +38,32 @@ class UseCase implements IUseCase {
     $user = User::create($typeUser);
 
     if ($user::class == $this->nameError::class) {
-      return $this->nameError;
+      return new NameError($typeUser->name);
     }
 
     if ($user::class == $this->emailError::class) {
-      return $this->emailError;
+      return new EmailError($typeUser->email);
     }
 
     if ($user::class == $this->passwordError::class) {
-      return $this->passwordError;
+      return new PasswordError($typeUser->password);
+    }
+
+    $exists = $this->userRepository->findByEmail($user->getEmail()->getValue());
+
+    if (!$exists) {
+      $dataOrError = $this->userRepository->createUser(
+        $user->getName()->getValue(),
+        $user->getEmail()->getValue(),
+        $user->getPassword()->getValue(),
+      );
+  
+      if($dataOrError::class === \Error::class) {
+        print_r($dataOrError);
+      }
     }
 
     return $user;
-
   }
 }
 

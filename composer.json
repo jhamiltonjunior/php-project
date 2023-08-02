@@ -20,7 +20,7 @@
             "@phpunit",
             "@phpcs"
         ],
-        "phpunit": "php vendor/bin/phpunit",
+        "phpunit": "./vendor/bin/phpunit",
         "phpcs": "php vendor/bin/phpcs"
     }
 }

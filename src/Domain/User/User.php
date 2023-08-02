@@ -25,6 +25,19 @@ class User {
     $this->password = $password;
   }
 
+  public function getName(): Name {
+    return $this->name;
+  }
+
+  public function getEmail(): Email {
+    return $this->email;
+  }
+
+  public function getPassword(): Password {
+    return $this->password;
+  }
+
+
   public static function create(
     TypeUser $user,
   ): NameError | EmailError | PasswordError | User {
