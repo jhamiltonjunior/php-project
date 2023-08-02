@@ -1,10 +1,26 @@
 {
     "autoload": {
         "classmap": [
-            "src/"
-        ]
+            "src/",
+            "src/Domain",
+            "src/UseCase",
+            "src/shared"
+        ],
+        "psr-4": {
+            "src/Domain\\": "Domain",
+            "src/UseCase\\": "UseCase",
+            "src/shared\\": "shared"
+        }
     },
     "require-dev": {
         "phpunit/phpunit": "^10.2"
+    },
+    "scripts": {
+        "test": [
+            "@phpunit",
+            "@phpcs"
+        ],
+        "phpunit": "php vendor/bin/phpunit",
+        "phpcs": "php vendor/bin/phpcs"
     }
 }

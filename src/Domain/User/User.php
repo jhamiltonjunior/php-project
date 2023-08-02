@@ -8,6 +8,7 @@ use Domain\User\Error\PasswordError;
 use Domain\User\Validation\Email;
 use Domain\User\Validation\Name;
 use Domain\User\Validation\Password;
+use Domain\User\Validation\TypeUser;
 
 class User {
   private NameError | Name $name;
@@ -19,23 +20,21 @@ class User {
     Email $email,
     Password $password,
   ) {
-    $this->name = $name->getValue();
-    $this->email = $email->getValue();
-    $this->password = $password->getValue();
+    $this->name = $name;
+    $this->email = $email;
+    $this->password = $password;
   }
 
   public static function create(
-    string $name,
-    string $email,
-    string $password,
+    TypeUser $user,
   ): NameError | EmailError | PasswordError | User {
-    $nameOrError = Name::create($name);
-    $emailOrError = Email::create($email);
-    $passwordOrError = Password::create($password);
+    $nameOrError = Name::create($user->name);
+    $emailOrError = Email::create($user->email);
+    $passwordOrError = Password::create($user->password);
     
-    $nameError = new NameError($name);
-    $emailError = new EmailError($email);
-    $passwordError = new PasswordError($password);
+    $nameError = new NameError($user->name);
+    $emailError = new EmailError($user->email);
+    $passwordError = new PasswordError($user->password);
 
     if ($nameOrError::class == $nameError::class) {
       return $nameError;

@@ -7,7 +7,7 @@ use Domain\User\Error\NameError;
 class Name {
   private string $name;
 
-  public function __construct(string $name) {
+  private function __construct(string $name) {
     $this->name = $name;
   }
 

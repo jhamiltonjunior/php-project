@@ -6,6 +6,9 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'src/shared\\' => array($baseDir . '/shared'),
+    'src/UseCase\\' => array($baseDir . '/UseCase'),
+    'src/Domain\\' => array($baseDir . '/Domain'),
     'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
 );
